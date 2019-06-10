@@ -24,7 +24,22 @@ repositories {
 }
 
 dependencies {
-    //compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.6.RELEASE'
-
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
 }
+
+bootRun.environment([
+        "WELCOME_MESSAGE": "Hello from bootRun",
+        "PORT":	"8181",
+        "CF_INSTANCE_ADDR": "10.0.4.59:61016",
+        "CF_INSTANCE_INDEX": "0",
+        "MEMORY_LIMIT": "1024m"
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+        "PORT":	"8080",
+        "CF_INSTANCE_ADDR": "10.0.4.59:61016",
+        "CF_INSTANCE_INDEX": "0",
+        "MEMORY_LIMIT": "1024m"
+])
