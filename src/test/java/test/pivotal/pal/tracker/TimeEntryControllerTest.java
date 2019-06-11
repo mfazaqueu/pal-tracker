@@ -28,7 +28,7 @@ public class TimeEntryControllerTest {
     }
 
     @Test
-    public void testCreate() {
+    public void testCreate() throws Exception {
         long projectId = 123L;
         long userId = 456L;
         TimeEntry timeEntryToCreate = new TimeEntry(projectId, userId, LocalDate.parse("2017-01-08"), 8);
