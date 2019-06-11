@@ -1,7 +1,4 @@
-build/classes/
-build/reports/
-build/test-results/
-build/tmp/
+build
 .gradle
 .idea
 *.iml
