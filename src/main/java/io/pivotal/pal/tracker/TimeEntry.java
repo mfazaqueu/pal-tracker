@@ -36,6 +36,22 @@ public class TimeEntry {
         this.id = id;
     }
 
+    public void setProjectId(long projectId) {
+        this.projectId = projectId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
