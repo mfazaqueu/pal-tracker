@@ -11,8 +11,6 @@ import javax.annotation.PostConstruct;
 @SpringBootApplication
 public class PalTrackerApplication {
 
-    private TimeEntryRepository timeEntryRepository;
-
     public static void main(String[] args) {
         SpringApplication.run(PalTrackerApplication.class, args);
     }
